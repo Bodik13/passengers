@@ -13,20 +13,21 @@ protocol MainInteractorInput {
 }
 
 protocol MainInteractorOutput {
-    func didFetchPassengersInteractor(passengers: [Passenger])
+    func didFetchPassengersInteractor(passengers: [Passenger]?)
 }
 
 class MainInteractor {
     
-   
+    let passengersRepository = PassengersRepository(dataStoreProvider: PassengersDataStoreProvider.self)
 }
 
 extension MainInteractor: MainInteractorInput {
     
     func fetchPassengers(output: MainInteractorOutput) {
-        // get data from storeg
-        let passengers = [Passenger(name: "passenger1"), Passenger(name: "passenger2")]
-        output.didFetchPassengersInteractor(passengers: passengers)
+        passengersRepository.getAllPassengers { (passengers, error) in
+            output.didFetchPassengersInteractor(passengers: passengers)
+        }
+        
     }
     
 }

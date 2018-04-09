@@ -30,7 +30,7 @@ extension MainPresenter: MainViewControllerOutput {
 
 extension MainPresenter: MainInteractorOutput {
     
-    func didFetchPassengersInteractor(passengers: [Passenger]) {
+    func didFetchPassengersInteractor(passengers: [Passenger]?) {
         self.viewController?.displayPassengers(passengers: passengers)
     }
     

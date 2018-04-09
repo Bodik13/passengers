@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A2E59730207BBE6100DC9F84 /* PassengersDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E5972F207BBE6100DC9F84 /* PassengersDataStore.swift */; };
+		A2E59732207BBFAA00DC9F84 /* PassengersDataStoreLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E59731207BBFAA00DC9F84 /* PassengersDataStoreLocal.swift */; };
+		A2E59735207BC1BD00DC9F84 /* PassengersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E59734207BC1BD00DC9F84 /* PassengersRepository.swift */; };
+		A2E59737207BC24700DC9F84 /* PassengersDataStoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E59736207BC24700DC9F84 /* PassengersDataStoreProvider.swift */; };
 		A2F2F70B2078E89A00754D77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F2F70A2078E89A00754D77 /* AppDelegate.swift */; };
 		A2F2F70D2078E89A00754D77 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F2F70C2078E89A00754D77 /* MainViewController.swift */; };
 		A2F2F7102078E89A00754D77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2F2F70E2078E89A00754D77 /* Main.storyboard */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A2E5972F207BBE6100DC9F84 /* PassengersDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengersDataStore.swift; sourceTree = "<group>"; };
+		A2E59731207BBFAA00DC9F84 /* PassengersDataStoreLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengersDataStoreLocal.swift; sourceTree = "<group>"; };
+		A2E59734207BC1BD00DC9F84 /* PassengersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengersRepository.swift; sourceTree = "<group>"; };
+		A2E59736207BC24700DC9F84 /* PassengersDataStoreProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengersDataStoreProvider.swift; sourceTree = "<group>"; };
 		A2F2F7072078E89A00754D77 /* Passengers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Passengers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2F2F70A2078E89A00754D77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2F2F70C2078E89A00754D77 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +51,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A2E5972D207BBE1400DC9F84 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				A2E5972E207BBE2400DC9F84 /* Passengers */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		A2E5972E207BBE2400DC9F84 /* Passengers */ = {
+			isa = PBXGroup;
+			children = (
+				A2E59733207BBFAF00DC9F84 /* DataStore */,
+				A2E59734207BC1BD00DC9F84 /* PassengersRepository.swift */,
+			);
+			path = Passengers;
+			sourceTree = "<group>";
+		};
+		A2E59733207BBFAF00DC9F84 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				A2E5972F207BBE6100DC9F84 /* PassengersDataStore.swift */,
+				A2E59731207BBFAA00DC9F84 /* PassengersDataStoreLocal.swift */,
+				A2E59736207BC24700DC9F84 /* PassengersDataStoreProvider.swift */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
 		A2F2F6FE2078E89A00754D77 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +129,7 @@
 		A2F2F7202078F2CA00754D77 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				A2E5972D207BBE1400DC9F84 /* DataStore */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -185,6 +221,10 @@
 				A2F2F7232078F4B400754D77 /* Passenger.swift in Sources */,
 				A2F2F70B2078E89A00754D77 /* AppDelegate.swift in Sources */,
 				A2F2F7272078FF8D00754D77 /* MainInteractor.swift in Sources */,
+				A2E59732207BBFAA00DC9F84 /* PassengersDataStoreLocal.swift in Sources */,
+				A2E59730207BBE6100DC9F84 /* PassengersDataStore.swift in Sources */,
+				A2E59735207BC1BD00DC9F84 /* PassengersRepository.swift in Sources */,
+				A2E59737207BC24700DC9F84 /* PassengersDataStoreProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
