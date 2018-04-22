@@ -9,20 +9,25 @@
 import Foundation
 
 protocol PassengersRepositoryDataStoreProvider {
-    static func getDataStore() -> PassengersDataStore.Type
+    func getDataStore() -> PassengersDataStore
 }
 
 class PassengersRepository {
     
-    var dataStoreProvider: PassengersRepositoryDataStoreProvider.Type
+    var dataStoreProvider: PassengersRepositoryDataStoreProvider
     
-    init(dataStoreProvider: PassengersRepositoryDataStoreProvider.Type) {
+    init(dataStoreProvider: PassengersRepositoryDataStoreProvider) {
         self.dataStoreProvider = dataStoreProvider
+    }
+    
+    func add(passenger: Passenger, callback: @escaping (Bool?, Error?) -> Void) {
+        let dataStore = self.dataStoreProvider.getDataStore()
+        dataStore.add(passenger: passenger, callback: callback)
     }
     
     func getAllPassengers(callback: @escaping(_ passengers: [Passenger]?, _ error: Error?) -> Void) {
         let dataStore = self.dataStoreProvider.getDataStore()
         dataStore.getAllPassengers(callback: callback)
-}
+    }
     
 }

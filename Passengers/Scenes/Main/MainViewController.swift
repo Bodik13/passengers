@@ -38,6 +38,11 @@ class MainViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func addButtonTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "toNew", sender: self)
+    }
+    
 }
 
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {

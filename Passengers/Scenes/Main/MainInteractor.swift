@@ -18,11 +18,12 @@ protocol MainInteractorOutput {
 
 class MainInteractor {
     
-    let passengersRepository = PassengersRepository(dataStoreProvider: PassengersDataStoreProvider.self)
+    let passengersRepository = PassengersRepository(dataStoreProvider: PassengersDataStoreProvider())
+    
 }
 
 extension MainInteractor: MainInteractorInput {
-    
+
     func fetchPassengers(output: MainInteractorOutput) {
         passengersRepository.getAllPassengers { (passengers, error) in
             output.didFetchPassengersInteractor(passengers: passengers)

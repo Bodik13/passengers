@@ -9,5 +9,7 @@
 import Foundation
 
 protocol PassengersDataStore {
-    static func getAllPassengers(callback: @escaping(_ passengers: [Passenger]?, _ error: Error?) -> Void)
+    func add(passenger: Passenger, callback: @escaping(_ success: Bool?, _ error: Error?) -> Void)
+    func remove(by ID: String, callback: @escaping(_ success: Bool?, _ error: Error?) -> Void)
+    func getAllPassengers(callback: @escaping(_ passengers: [Passenger]?, _ error: Error?) -> Void)
 }

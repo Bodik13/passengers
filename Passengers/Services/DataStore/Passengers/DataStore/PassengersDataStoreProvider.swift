@@ -10,8 +10,8 @@ import Foundation
 
 class PassengersDataStoreProvider: PassengersRepositoryDataStoreProvider {
 
-    static func getDataStore() -> PassengersDataStore.Type {
-        return PassengersDataStoreLocal.self
+     func getDataStore() -> PassengersDataStore {
+        return PassengersDataStoreLocal()
     }
     
 }
